@@ -8,10 +8,8 @@ This repository contains the code for a real-time lip reading system using a dee
 3. [Installation](#installation)
 4. [Data Preparation](#data-preparation)
 5. [Model Architecture](#model-architecture)
-6. [Training](#training)
-7. [Testing and Evaluation](#testing-and-evaluation)
-8. [Pre-trained Weights](#pre-trained-weights)
-9. [References](#references)
+6. [Training and Testing](#training&testing)
+7. [References](#references)
 
 ## Introduction
 
@@ -31,22 +29,20 @@ Make sure you have Python 3.x installed. Install the required libraries by runni
 
 ```bash
 pip install opencv-python matplotlib imageio gdown tensorflow
-
-## 2. Clone the Repository
-
-To clone the repository, run the following commands:
+```
+### 2. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/lip-reading.git](https://github.com/Heblin2003/Lip-Reading.git
+git clone https://github.com/yourusername/lip-reading.git
 cd lip-reading
-
+```
 ## Data Preparation
 
-**Download the dataset from Google Drive:**
-
-Download the dataset:
+Download the dataset from Google Drive.
+Extract the dataset:
 ```bash
 python -c "import gdown; gdown.download('https://drive.google.com/uc?id=1YlvpDLix3S-U8fd-gqRwPcWXAXm8JwjL', 'data.zip', quiet=False); gdown.extractall('data.zip')"
+```
 
 ## Model Architecture
 
@@ -57,21 +53,23 @@ The lip-reading model uses a combination of:
 - **TimeDistributed Flattening**: To flatten the output before sending it to the LSTMs.
 - **Dense Layers with Softmax**: For predicting characters from a predefined vocabulary.
 
-## Training
 
-You can train the model by using the checkpoints available:
-Load the pre-trained weights by adding the following line before testing:
+## Training and Testing
+
+The training script uses Adam optimizer and a Learning Rate Scheduler that adjusts the learning rate over epochs.
+CTC Loss is applied to handle the sequence-to-sequence nature of the lip-reading task.
+Testing and Evaluation
+use checkpoints to train the model:
 
 ```bash
 model.load_weights('models/checkpoint')
+```
+Test using the sample video 
+The prediction will be displayed after processing, alongside the ground truth.
 
-The training script uses the Adam optimizer and a Learning Rate Scheduler that adjusts the learning rate over epochs.
-CTC Loss is applied to handle the sequence-to-sequence nature of the lip-reading task.
-
+## References
 
 ## References
 
 - [TensorFlow Documentation](https://www.tensorflow.org/)
 - [OpenCV Documentation](https://opencv.org/)
-
-
