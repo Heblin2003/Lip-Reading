@@ -37,7 +37,7 @@ pip install opencv-python matplotlib imageio gdown tensorflow
 To clone the repository, run the following commands:
 
 ```bash
-git clone https://github.com/yourusername/lip-reading.git
+git clone https://github.com/yourusername/lip-reading.git](https://github.com/Heblin2003/Lip-Reading.git
 cd lip-reading
 
 ## Data Preparation
