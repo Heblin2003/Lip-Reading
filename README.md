@@ -69,7 +69,5 @@ The prediction will be displayed after processing, alongside the ground truth.
 
 ## References
 
-## References
-
 - [TensorFlow Documentation](https://www.tensorflow.org/)
 - [OpenCV Documentation](https://opencv.org/)
